@@ -139,7 +139,7 @@ public class Login extends javax.swing.JFrame {
                 usuarioAConsultar = usuarioDAO.query(usuarioAConsultar);
 
                 if (txtContraseña.getText().equals(usuarioAConsultar.getPassword()) && txtUsuario.getText().equals(usuarioAConsultar.getUsername())) {
-                    JOptionPane.showMessageDialog(null, "Bienvenido\n", "Mensaje de bienvenida", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Bienvenido a Programación III\n", "Mensaje de bienvenida", JOptionPane.INFORMATION_MESSAGE);
 
                     MdiGeneral menuGeneral = new MdiGeneral();
                     menuGeneral.setVisible(true);

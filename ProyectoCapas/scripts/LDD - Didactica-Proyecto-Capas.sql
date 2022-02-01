@@ -15,4 +15,10 @@ CREATE TABLE IF NOT EXISTS usuario (
   password VARCHAR(25)NOT NULL,
   PRIMARY KEY (id_usuario) )
 ENGINE = InnoDB CHARACTER SET = latin1;
+CREATE TABLE IF NOT EXISTS bitacora (
+  id_bitacora INT NOT NULL AUTO_INCREMENT,
+  accion VARCHAR(60) NOT NULL,
+  PRIMARY KEY (id_bitacora) )
+ENGINE = InnoDB CHARACTER SET = latin1;
+
 SELECT * FROM persona;

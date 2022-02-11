@@ -25,3 +25,17 @@ CREATE TABLE bitacora (
 	FOREIGN KEY (usucodigo) REFERENCES usuario (usucodigo),
     FOREIGN KEY (aplcodigo) REFERENCES aplicaciones (aplcodigo)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE perfiles (
+	percodigo VARCHAR(5) PRIMARY KEY,
+	pernombre varchar(60) NOT NULL, 
+	perestado VARCHAR(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE relperfilesusuario (
+	percodigo VARCHAR(5),
+	usucodigo VARCHAR(15),
+    PRIMARY KEY ( percodigo, usucodigo),
+    FOREIGN KEY (percodigo) REFERENCES perfiles (percodigo),
+    FOREIGN KEY (usucodigo) REFERENCES usuario (usucodigo)
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+

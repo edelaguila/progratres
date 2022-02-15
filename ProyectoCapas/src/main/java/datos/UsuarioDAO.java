@@ -16,11 +16,11 @@ import java.util.List;
  */
 public class UsuarioDAO {
 
-    private static final String SQL_SELECT = "SELECT id_usuario, username, contra FROM usuario";
-    private static final String SQL_INSERT = "INSERT INTO usuario(username, contra) VALUES(?, ?)";
-    private static final String SQL_UPDATE = "UPDATE usuario SET username=?, contra=? WHERE id_usuario = ?";
+    private static final String SQL_SELECT = "SELECT id_usuario, username, password FROM usuario";
+    private static final String SQL_INSERT = "INSERT INTO usuario(username, password) VALUES(?, ?)";
+    private static final String SQL_UPDATE = "UPDATE usuario SET username=?, password=? WHERE id_usuario = ?";
     private static final String SQL_DELETE = "DELETE FROM usuario WHERE id_usuario=?";
-    private static final String SQL_QUERY = "SELECT id_usuario, username, contra FROM usuario WHERE username = ?";
+    private static final String SQL_QUERY = "SELECT id_usuario, username, password FROM usuario WHERE username = ?";
 
     public List<Usuario> select() {
         Connection conn = null;

@@ -22,3 +22,15 @@ CREATE TABLE IF NOT EXISTS bitacora (
 ENGINE = InnoDB CHARACTER SET = latin1;
 
 SELECT * FROM persona;
+CREATE TABLE IF NOT EXISTS vendedor (
+  id_vendedor INT NOT NULL AUTO_INCREMENT,
+  nombreVendedor VARCHAR(60) NOT NULL,
+  direVendedor VARCHAR(25)NOT NULL,
+  PRIMARY KEY (id_vendedor) )
+ENGINE = InnoDB CHARACTER SET = latin1;
+CREATE TABLE IF NOT EXISTS empleado (
+  id_empleado INT NOT NULL AUTO_INCREMENT,
+  nombre_empleado VARCHAR(60) NOT NULL,
+  dire_empleado VARCHAR(25)NOT NULL,
+  PRIMARY KEY (id_empleado) )
+ENGINE = InnoDB CHARACTER SET = latin1;

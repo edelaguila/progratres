@@ -19,11 +19,11 @@ import java.util.List;
  */
 public class VendedorDAO {
 
-    private static final String SQL_SELECT = "SELECT id_vendedor, nombre_vendedor, dire_vendedor FROM vendedor";
-    private static final String SQL_INSERT = "INSERT INTO vendedor(nombre_vendedor, dire_vendedor) VALUES(?, ?)";
-    private static final String SQL_UPDATE = "UPDATE vendedor SET nombre_vendedor=?, dire_vendedor=? WHERE id_vendedor = ?";
-    private static final String SQL_DELETE = "DELETE FROM vendedor WHERE id_vendedor=?";
-    private static final String SQL_QUERY = "SELECT id_vendedor, nombre_vendedor, dire_vendedor FROM vendedor WHERE id_vendedor = ?";
+    private static final String SQL_SELECT = "SELECT id_vendedor, nombrevendedor, direvendedor FROM vendedor";
+    private static final String SQL_INSERT = "INSERT INTO vendedor(nombrevendedor, direvendedor) VALUES(?, ?)";
+    private static final String SQL_UPDATE = "UPDATE vendedor SET nombrevendedor=?, direvendedor=? WHERE idvendedor = ?";
+    private static final String SQL_DELETE = "DELETE FROM vendedor WHERE idvendedor=?";
+    private static final String SQL_QUERY = "SELECT id_vendedor, nombrevendedor, direvendedor FROM vendedor WHERE id_vendedor = ?";
 
     public List<Vendedor> select() {
         Connection conn = null;
@@ -38,8 +38,8 @@ public class VendedorDAO {
             rs = stmt.executeQuery();
             while (rs.next()) {
                 int id_vendedor = rs.getInt("id_vendedor");
-                String nombre = rs.getString("nombre_vendedor");
-                String direccion = rs.getString("dire_vendedor");
+                String nombre = rs.getString("nombrevendedor");
+                String direccion = rs.getString("direvendedor");
                 
                 vendedor = new Vendedor();
                 vendedor.setId_vendedor(id_vendedor);
@@ -148,8 +148,8 @@ public class VendedorDAO {
             rs = stmt.executeQuery();
             while (rs.next()) {
                 int id_vendedor = rs.getInt("id_vendedor");
-                String nombre = rs.getString("nombre_vendedor");
-                String direccion = rs.getString("dire_vendedor");
+                String nombre = rs.getString("nombrevendedor");
+                String direccion = rs.getString("direvendedor");
                 
                 vendedor = new Vendedor();
                 vendedor.setId_vendedor(id_vendedor);

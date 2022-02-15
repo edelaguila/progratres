@@ -35,7 +35,7 @@ public class UsuarioDAO {
             while (rs.next()) {
                 int id_usuario = rs.getInt("id_usuario");
                 String username = rs.getString("username");
-                String password = rs.getString("contra");
+                String password = rs.getString("password");
 
                 usuario = new Usuario();
                 usuario.setId_usuario(id_usuario);
@@ -139,7 +139,7 @@ public class UsuarioDAO {
             while (rs.next()) {
                 int id_usuario = rs.getInt("id_usuario");
                 String username = rs.getString("username");
-                String password = rs.getString("contra");
+                String password = rs.getString("password");
 
                 usuario = new Usuario();
                 usuario.setId_usuario(id_usuario);
